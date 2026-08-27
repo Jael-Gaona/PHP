@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Formulario con botón neón</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url("japon.gif");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background-color: rgb(255, 255, 255);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(255, 255, 255, 0);
+      width: 300px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    input, button {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      font-size: 16px;
+      border-radius: 6px;
+      box-sizing: border-box;
+      border: 1px solid rgb(0, 0, 0);
+      transition: all 0.3s ease;
+      text-align: center;
+    }
+
+    input:focus {
+      outline: none;
+      border-color: #3498db;
+      box-shadow: 0 0 5px #3498db;
+    }
+
+    /* Estilos del botón neón */
+    button {
+      background: none;
+      color: rgba(0, 166, 255, 0);
+      border: 2px solid rgba(0, 166, 255, 0);
+      cursor: pointer;
+      font-weight: bold;
+      text-transform: uppercase;
+      box-shadow:
+        0 0 5px rgb(0, 166, 255),
+        0 0 10px rgb(0, 166, 255),
+        0 0 20px rgb(0, 166, 255),
+        0 0 40px rgb(0, 166, 255);
+      animation: neonGlow 2s ease-in-out infinite alternate;
+    }
+
+    button:hover {
+      box-shadow:
+        0 0 10px rgb(0, 166, 255),
+        0 0 20px rgb(0, 166, 255),
+        0 0 30px rgb(0, 166, 255),
+        0 0 50px rgb(0, 166, 255);
+      background-color: rgba(0, 255, 255, 0.1);
+      color: rgb(0, 166, 255);
+    }
+
+    @keyframes neonGlow {
+      0% {
+        color: rgb(0, 166, 255);
+        box-shadow:
+          0 0 5px rgb(0, 166, 255),
+          0 0 10px rgb(0, 166, 255),
+          0 0 20px rgb(0, 166, 255),
+          0 0 40px rgb(0, 166, 255);
+      }
+      100% {
+        color: rgb(21, 208, 8);
+        box-shadow:
+          0 0 5px rgb(21, 208, 8),
+          0 0 10px rgb(21, 208, 8),
+          0 0 20px rgb(21, 208, 8),
+          0 0 40px rgb(21, 208, 8);
+      }
+    }
+
+    .error {
+      color: red;
+      font-weight: bold;
+      margin-top: 10px;
+      width: 100%;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <input type="text" placeholder="Escribe algo..." />
+    <button>Enviar</button>
+    <p class="error">Mensaje de error</p>
+  </div>
+
+</body>
+</html>
+
+
+
+
